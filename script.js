@@ -14,18 +14,18 @@ window.onload = function() {
 
 function _insert_image() {
     imgElem = document.querySelector("#srcImg")
-  _MouseEvents();
+  _mouse_func();
 
   setInterval(function() {
     _ResetCanvas();
-    _DrawImage();
+    _draw_image();
   }, 1000/30);
 }
 function _ResetCanvas() {
   ctx.fillStyle = getComputedStyle(canvas).backgroundColor;
   ctx.fillRect(0,0, canvas.width, canvas.height);
 }
-function _MouseEvents() {
+function _mouse_func() {
   canvas.addEventListener("mousedown",function (e){
     var mouseX = e.pageX - this.offsetLeft;
     var mouseY = e.pageY - this.offsetTop;
@@ -48,6 +48,6 @@ function _MouseEvents() {
     canDrag = false;
   });
 }
-function _DrawImage() {
+function _draw_image() {
   ctx.drawImage(imgElem, pos.x-(imgElem.width/2), pos.y-(imgElem.height/2));
 }
