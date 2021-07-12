@@ -1,0 +1,33 @@
+body {
+    background-color: #e8f7e6;
+    height: min-content;
+    box-sizing: border-box;
+}
+.main-content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+place-items: center;
+box-sizing: border-box;
+}
+.image-wrapper{
+    display: flex;
+    flex-direction: column;
+
+}
+.main-canvas{
+    margin: 15pt;
+    background-color: darkgrey;
+}
+#draggable{
+    position: absolute;
+}
+@media screen and (prefers-color-scheme:dark) {
+    body{
+        background-color: #00040a;
+    }
+}
